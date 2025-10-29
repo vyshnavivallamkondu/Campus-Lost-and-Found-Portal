@@ -1,0 +1,89 @@
+.dashboard-container {
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(
+    140deg,
+    rgb(251, 253, 248),
+    rgb(251, 232, 232),
+    rgb(236, 245, 248)
+  ) !important;
+}
+
+.glass-navbar {
+  background: rgba(235, 127, 127, 0.146) !important;
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.portal-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0022ffae !important;
+}
+
+.nav-item {
+  margin-left: 35px;
+}
+.nav-item .dropdown-menu {
+  background: rgba(236, 255, 193, 0.8) !important;
+  color: rgb(129, 143, 38) !important;
+}
+
+.logout-btn {
+  color: #fc4c4c !important;
+  font-weight: 600;
+  margin-left: 50px !important;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+}
+
+.stat-card h4 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #0084ff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.stat-card p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #389ef7;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: #ffd86b;
+}
+
+.welcome-card {
+  margin-top: 80px;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  color: rgb(247, 8, 215);
+}
+
+.welcome-card h3 {
+  color: #ffa16b;
+  margin-bottom: 10px;
+}

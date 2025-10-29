@@ -1,0 +1,78 @@
+/* --- Page Layout --- */
+.student-list-page {
+  padding: 40px 20px;
+  background: linear-gradient(145deg, #faf8f9, #c2fdfccd);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Header --- */
+.student-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.student-header h2 {
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.student-header p {
+  color: #6c757d;
+  font-size: 15px;
+}
+
+/* --- Student Grid --- */
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  width: 90%;
+  max-width: 1100px;
+}
+
+/* --- Student Card --- */
+.student-card-glow {
+  background: rgb(255, 248, 248);
+  border-radius: 16px;
+  padding: 20px 25px;
+  box-shadow: 0 0 12px rgba(13, 110, 253, 0.15);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(7, 57, 132, 0.15);
+}
+
+.student-card-glow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(13, 110, 253, 0.35);
+}
+
+/* --- Text Styles --- */
+.student-name {
+  font-weight: 700;
+  color: #0d6efd;
+  margin-bottom: 5px;
+}
+
+.student-username {
+  color: #495057;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.student-info p {
+  color: #4f2121;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.student-info strong {
+  color: #000;
+}
+
+/* --- Icons --- */
+.icon {
+  margin-right: 6px;
+  color: #0dfd65;
+}

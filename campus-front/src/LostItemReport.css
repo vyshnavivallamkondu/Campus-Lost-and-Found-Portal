@@ -1,0 +1,136 @@
+.lost-item-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-image: linear-gradient(
+    145deg,
+    rgba(247, 252, 233, 0.637),
+    rgba(181, 214, 245, 0.637),
+    rgba(133, 221, 243, 0.637)
+  );
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.text-muted {
+  font-size: 24px !important;
+}
+
+/* Header */
+.lost-item-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.lost-item-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-top: 10px;
+}
+
+.lost-item-header p {
+  color: #4b5563;
+  font-size: 1.1rem;
+}
+
+/* Grid Layout for Cards */
+.lost-item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Card Styling */
+.lost-item-card-glow {
+  background: rgba(244, 249, 249, 0.8);
+  border-radius: 16px;
+  padding: 25px 25px 25px 35px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+  box-sizing: border-box;
+}
+
+.lost-item-card-glow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+}
+
+/* Text styling */
+.item-title {
+  color: #1d1dc0;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+
+.item-id {
+  font-size: 0.9rem;
+  color: #bebebe;
+  margin-bottom: 10px;
+}
+
+.item-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tag.category {
+  background-color: #e0e7ff;
+  color: #383190;
+}
+
+.tag.color {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.icon {
+  color: #647d71;
+  margin-right: 6px;
+}
+
+p {
+  margin: 5px 0;
+  color: #374151;
+}
+
+/* Return button */
+.text-end button {
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lost-item-header h2 {
+    font-size: 1.7rem;
+  }
+  .lost-item-grid {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+}
+
+.btns {
+  width: 50% !important;
+  margin: auto !important;
+  padding: 5px !important;
+}
+
+.btn-sm {
+  width: 10em !important;
+}

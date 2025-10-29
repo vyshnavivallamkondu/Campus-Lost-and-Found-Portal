@@ -1,0 +1,93 @@
+.delete-student-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafa, #c2defd);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.header-section h3 {
+  font-size: 1.6rem; /* Reduced from 2rem */
+  letter-spacing: 0.4px;
+}
+
+.header-subtitle {
+  font-size: 0.85rem; /* smaller subtitle */
+}
+
+.student-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  padding: 0 2rem;
+}
+
+.student-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e3eaf5;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 136, 255, 0.2);
+}
+
+.student-card-content .icon {
+  color: #007bff;
+  margin-right: 6px;
+}
+
+.delete-btn-small {
+  border-radius: 20px;
+  font-size: 0.8rem !important;
+  font-weight: 500;
+  padding: 4px 12px !important;
+  border-width: 2px; /* thinner outline */
+  transition: all 0.2s ease !important;
+  width: 75% !important;
+}
+
+.delete-btn-small:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.return-btn-small {
+  font-size: 1.2rem !important;
+  padding: 6px 18px;
+  border-radius: 25px;
+  transition: all 0.3s ease !important;
+  width: 15% !important;
+}
+
+.return-btn-small:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

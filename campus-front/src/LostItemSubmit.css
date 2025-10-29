@@ -1,0 +1,119 @@
+/* Center the entire page vertically and horizontally */
+.lost-item-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9fafc, #f3ffdc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* The main card container */
+.lost-item-card {
+  background: #ffffff;
+  width: 70%;
+  max-width: 700px;
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 0 20px rgba(0, 128, 255, 0.1);
+  transition: all 0.3s ease;
+  max-height: 100%;
+}
+
+/* Hover glow effect on the form card */
+.lost-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(0, 128, 255, 0.25);
+}
+
+/* Form labels */
+.form-label {
+  font-weight: 600;
+  color: #1f3c88;
+}
+
+/* Inputs styling */
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #b8c4e0;
+  transition: all 0.2s ease-in-out;
+  background-color: #f9fbff;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+  background-color: #ffffff;
+}
+
+/* Invalid field highlight */
+.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+/* Headings */
+.text-center h4 {
+  font-weight: 700;
+  color: #1f3c88;
+}
+
+.text-sec {
+  color: #6b8c6b;
+  font-size: 25px;
+  text-shadow: none;
+}
+
+/* Button group styling */
+.lf-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Buttons look and hover effect */
+.lf-btn-sm {
+  max-width: 300px;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary.lf-btn-sm {
+  background: linear-gradient(135deg, #007bff, #0056d2);
+  border: none;
+}
+
+.btn-primary.lf-btn-sm:hover {
+  background: linear-gradient(135deg, #0056d2, #0040a8);
+  box-shadow: 0 0 15px rgba(0, 91, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-secondary.lf-btn-sm {
+  background: #e0e7ff;
+  color: #1f3c88;
+  border: none;
+}
+
+.btn-secondary.lf-btn-sm:hover {
+  background: #cdd8ff;
+  box-shadow: 0 0 10px rgba(31, 60, 136, 0.3);
+  transform: translateY(-2px);
+  color: black !important;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .lost-item-card {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .lf-btn-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

@@ -75,9 +75,15 @@ const RegisterUser = () => {
 
   return (
     <div className="registerUser d-flex justify-content-center align-items-center">
-      <video className="background-video" autoPlay loop muted playsInline>
-        <source src="/videos/bg-dark-loop.mp4" type="video/mp4" />
-      </video>
+  <div className="home-link" onClick={() => navigate("/")}>
+        ← Home
+      </div>
+      <div className="bg-shapes" aria-hidden="true">
+        <div className="shape shape-1" />
+        <div className="shape shape-2" />
+        <div className="shape shape-3" />
+        <div className="shape shape-4" />
+      </div>
 
       <div className="glass-card p-5">
         <h2 className="text-center mb-2">Join Us Now</h2>
@@ -211,6 +217,7 @@ const RegisterUser = () => {
 
         <p className="bottom-link text-center mt-3">
           Already have an account? <a onClick={() => navigate("/")}>Login</a>
+          <a onClick={() => navigate("/login")}>Login</a>
         </p>
       </div>
     </div>

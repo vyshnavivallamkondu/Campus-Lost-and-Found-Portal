@@ -89,5 +89,36 @@ public class LostItemService {
                 .map(Map.Entry::getKey)
                 .collect(Collectors.toList());
     }
+	 @Autowired
+    private FoundItemService foundItemService;
+
+    public List<FoundItem> getPotentialMatches(String lostItemId) {
+        Optional<LostItem> lostOpt = lostItemDao.findById(lostItemId);
+        if (lostOpt.isEmpty()) return List.of();
+
+        LostItem lost = lostOpt.get();
+        List<FoundItem> allFound = foundItemService.getAllFoundItems();
+
+        // Simple weighted fuzzy match scoring
+        Map<FoundItem, Double> scored = new LinkedHashMap<>();
+        for (FoundItem found : allFound) {
+            double score = 0.0;
+
+            if (FuzzySearchUtil.isFuzzyMatch(found.getItemName(), lost.getItemName())) score += 3.0;
+            if (FuzzySearchUtil.isFuzzyMatch(found.getCategory(), lost.getCategory())) score += 2.0;
+            if (FuzzySearchUtil.isFuzzyMatch(found.getColor(), lost.getColor())) score += 1.0;
+            if (FuzzySearchUtil.isFuzzyMatch(found.getBrand(), lost.getBrand())) score += 1.0;
+            if (FuzzySearchUtil.isFuzzyMatch(found.getLocation(), lost.getLocation())) score += 1.0;
+
+            if (score >= 4.0) { // threshold for relevance
+                scored.put(found, score);
+            }
+        }
+
+        return scored.entrySet().stream()
+                .sorted(Map.Entry.<FoundItem, Double>comparingByValue(Comparator.reverseOrder()))
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+    }
 
 }

@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -13,10 +15,10 @@ import {
   FaTag,
   FaPalette,
 } from "react-icons/fa";
-import "../../LostItemReport.css"; // reuse your existing CSS
+import "../../LostItemReport.css";
 
 const SearchPage = () => {
-  const [mode, setMode] = useState("lost"); // 'lost' or 'found'
+  const [mode, setMode] = useState("lost");
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [results, setResults] = useState([]);
@@ -26,13 +28,11 @@ const SearchPage = () => {
 
   const navigate = useNavigate();
 
-  // debounce input: update debouncedQuery 400ms after user stops typing
   useEffect(() => {
     const id = setTimeout(() => setDebouncedQuery(query.trim()), 400);
     return () => clearTimeout(id);
   }, [query]);
 
-  // perform search whenever mode or debouncedQuery changes
   useEffect(() => {
     if (!debouncedQuery) {
       setResults([]);
@@ -64,21 +64,16 @@ const SearchPage = () => {
 
   const handleModeChange = (e) => {
     setMode(e.target.value);
-    // keep the query - user may want to search same text in other mode
   };
 
   const handleCardAction = (item) => {
-    // Example: navigate to item details or mark as found depending on role
-    // Here we'll try to mimic your LostItemReport's behaviour by id and mode
     if (mode === "lost") {
-      navigate(`/Found-Redirected/${item.lostItemId}`); // same as mark found flow
+      navigate(`/Found-Redirected/${item.lostItemId}`);
     } else {
-      // if found item flow exists you can navigate similarly
-      navigate(`/FoundItemDetails/${item.foundItemId}`); // change as required
+      navigate(`/FoundItemDetails/${item.foundItemId}`);
     }
   };
 
-  // small helper to get item id and fields for rendering both Lost and Found items
   const normalizedResults = useMemo(() => {
     return results.map((r) => ({
       id: r.lostItemId ?? r.foundItemId,
@@ -143,7 +138,7 @@ const SearchPage = () => {
               className="form-control"
               placeholder={`Search ${
                 mode === "lost" ? "lost" : "found"
-              } items — try "ele" or "iphnoe"`}
+              } items — try ele or blak`}
               style={{ paddingLeft: 16, paddingRight: 48, borderRadius: 12 }}
             />
             <FaSearch
